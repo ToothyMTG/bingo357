@@ -1,0 +1,127 @@
+:root {
+    --yellow:#d8fd35;
+    --green:#8dc87b;
+    --orange: #f95f1f;
+}
+
+
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+.body_kubulek {background-color: var(--orange);}
+.body_zozun {background-color: var(--yellow);}
+
+@media (orientation: portrait) {
+    #mainframe {
+        height: 100vw;
+        width: 100vw;
+    }
+    #mainbody {
+    height:85%;
+    width:85%;
+    position:relative;
+    margin: auto;
+    }
+    .switcher {font-size: 1.5vw;}
+    #header {height: 5vw;font-size: 3.5vw;}
+    #subheader {height: 5vw;font-size: 2.5vw}
+}
+
+#mainbody button {
+    color:black;
+    width:20%;
+    height:20%;
+    float:left;
+    border-style:solid;
+    border-color: black;
+    border-width: 1px;
+    font-size: 2.4vw;
+    font-family: "Neue World",serif;
+    font-weight: bold;
+}
+
+@media (orientation: landscape) {
+    #mainframe {
+        height: 100vh;
+        width: 100vh;
+        margin:auto;
+    }
+    #mainbody {
+        height: 85%;
+        width: 85%;
+        margin: auto;
+        position:relative;
+    }
+    #mainbody button {
+        font-size: 2.4vh;
+    }
+    #header {height: 5%}
+    #subheader {height: 5%;}
+    .switcher {font-size: 1.5vh;}
+}
+
+#mainbody button:hover {
+    background-color: var(--green);
+}
+
+h1,h2 {
+    text-align: center;
+    font-family: "Neue World",serif;
+    margin: 0.3vh;
+}
+
+img {
+    float:left;
+    width: 20%;
+    height: 20%;
+}
+
+#mainbody .cross {
+    opacity: 1;
+    background-image: url('../img/cross.png');
+    background-size: 100%;
+}
+#mainbody .cross_zozun {background-color: var(--yellow);}
+#mainbody .cross_kubulek {background-color: var(--yellow);}
+
+@keyframes letsflash {
+    0% {background-color: var(--yellow);}
+    25% {background-color: var(--green);}
+    50% {background-color: var(--orange);}
+    75% {background-color: var(--green);}
+    100% {background-color: var(--yellow);}
+}
+
+.flash {
+    animation-name: letsflash;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+
+#reset:hover {
+    background-color: red;
+}
+
+#reset:active {
+    background-color: white;
+}
+
+#myAudio {
+    width: 30vw;
+    
+}
+
+.switcher {
+    background-color: var(--yellow);
+    position: relative;
+    left: 27.5%;
+    width: 15%;
+    height: 3%;
+    float:left;
+}
+.switcher:hover {
+    background-color: var(--green);
+}
