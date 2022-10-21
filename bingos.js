@@ -76,7 +76,7 @@ bingos = {
         'Oksfordzki akcent Kuby',
         'Piosenka dnia z czapy',
         'Ktoś wspomina Trójkę',
-        'Kuczyński szkaluje prezesa NPB',
+        'Kuczyński szkaluje prezesa NBP',
         'Opóźniony serwis',
         'Kontrower-syjny reportaż',
         ],
