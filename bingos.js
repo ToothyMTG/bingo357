@@ -54,7 +54,7 @@ bingos = {
         'Sołtys pogania Kubę',
         ],
     'kubulek_v5': [
-        'Usterka na linii z romówcą',
+        'Usterka na linii z rozmówcą',
         'FRAZA: "Nie brak opinii"',
         'Pierogi i inne pyszności',
         'Utwór Beach Boys',
