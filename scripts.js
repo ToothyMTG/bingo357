@@ -1,15 +1,16 @@
 pola = {}
-pola = bingos['kubulek_v4']
+pola = bingos['kubulek_v5']
 
 if (localStorage.bingotype === undefined) {
-    localStorage.bingotype = 'kubulek_v4'
+    localStorage.bingotype = 'kubulek_v5'
     document.body.classList.add('body_kubulek')    
-    pola = bingos['kubulek_v4']
+    pola = bingos['kubulek_v5']
     buttoncolor = 'body_kubulek'
     buttoncross = 'cross_kubulek'
     picturesrc = 'img/kubulek.jpg'
-    document.getElementById('subheader').innerHTML = 'edycja kubańska, wersja 4'
-    location.reload()
+    document.getElementById('subheader').innerHTML = 'edycja kubańska, wersja 5'
+    render_bingo()
+    //location.reload()
 }
 
 if (localStorage.bingotype == 'zozun') {
@@ -19,52 +20,66 @@ if (localStorage.bingotype == 'zozun') {
     document.getElementById('subheader').innerHTML = 'edycja zozuńska, wersja 1'
     picturesrc = 'img/zozun.jpg'
     pola = bingos[localStorage.bingotype]
+    render_bingo()
 }
 if (localStorage.bingotype == 'kubulek_v4') {
+    localStorage.bingotype ='kubulek_v5'
     document.body.classList.add('body_kubulek')    
     buttoncolor = 'body_kubulek'
     buttoncross = 'cross_kubulek'
-    document.getElementById('subheader').innerHTML = 'edycja kubańska, wersja 4'
+    document.getElementById('subheader').innerHTML = 'edycja kubańska, wersja 5'
     picturesrc = 'img/kubulek.jpg'
     pola = bingos[localStorage.bingotype]
+    render_bingo()
+}
+if (localStorage.bingotype == 'kubulek_v5') {
+    document.body.classList.add('body_kubulek')    
+    buttoncolor = 'body_kubulek'
+    buttoncross = 'cross_kubulek'
+    document.getElementById('subheader').innerHTML = 'edycja kubańska, wersja 5'
+    picturesrc = 'img/kubulek.jpg'
+    pola = bingos[localStorage.bingotype]
+    render_bingo()
 }
 
 bingonumbers = []
-
-for (let i = 0; i < pola.length; i++) {
-    if (pola[i] == "img") {
-        var kubulek = document.createElement('img')
-        //kubulek.width = "20%"
-        kubulek.src = picturesrc
-        kubulek.id = "kubulek"
-        kubulek.classList.add('image')
-        //kubulek.height= "20%"
-        document.getElementById('mainbody').appendChild(kubulek)        
-    } else {
-        var bingo_button = document.createElement('button')
-        bingo_button.id = (i + 1);
-        bingo_button.classList.add(buttoncolor)
-        bingo_button.onclick = function(){
-            var pole = event.target
-            if (pole.classList[1] != 'cross') {
-                pole.classList.add('cross')
-                pole.classList.add(buttoncross)
-                bingonumbers[pole.id] = (Number(pole.id))
-                localStorage.bingo = bingonumbers
-                checkbingo()
-            } else {
-                pole.classList.remove('cross')
-                pole.classList.remove(buttoncross)
-                bingonumbers[pole.id] = ''
-                localStorage.bingo = bingonumbers
-                checkbingo()
+function render_bingo () {
+    for (let i = 0; i < pola.length; i++) {
+        if (pola[i] == "img") {
+            var kubulek = document.createElement('img')
+            //kubulek.width = "20%"
+            kubulek.src = picturesrc
+            kubulek.id = "kubulek"
+            kubulek.classList.add('image')
+            //kubulek.height= "20%"
+            document.getElementById('mainbody').appendChild(kubulek)        
+        } else {
+            var bingo_button = document.createElement('button')
+            bingo_button.id = (i + 1);
+            bingo_button.classList.add(buttoncolor)
+            bingo_button.onclick = function(){
+                var pole = event.target
+                if (pole.classList[1] != 'cross') {
+                    pole.classList.add('cross')
+                    pole.classList.add(buttoncross)
+                    bingonumbers[pole.id] = (Number(pole.id))
+                    localStorage.bingo = bingonumbers
+                    checkbingo()
+                } else {
+                    pole.classList.remove('cross')
+                    pole.classList.remove(buttoncross)
+                    bingonumbers[pole.id] = ''
+                    localStorage.bingo = bingonumbers
+                    checkbingo()
+                }
             }
+            var buttontext = document.createTextNode(pola[i])
+            bingo_button.appendChild(buttontext)
+            document.getElementById('mainbody').appendChild(bingo_button)
         }
-        var buttontext = document.createTextNode(pola[i])
-        bingo_button.appendChild(buttontext)
-        document.getElementById('mainbody').appendChild(bingo_button)
     }
 }
+
 
 if (localStorage.bingo === undefined) {
     localStorage.bingo = ''
@@ -109,7 +124,7 @@ function reset() {
 }
 
 document.getElementById('switch_kubulek').onclick = function(){
-    localStorage.bingotype = 'kubulek_v4'
+    localStorage.bingotype = 'kubulek_v5'
     reset()   
 }
 //window.onload = document.getElementById('myAudio').play()
