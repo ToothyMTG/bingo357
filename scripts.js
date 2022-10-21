@@ -22,8 +22,7 @@ if (localStorage.bingotype == 'zozun') {
     pola = bingos[localStorage.bingotype]
     render_bingo()
 }
-if (localStorage.bingotype == 'kubulek_v4') {
-    localStorage.bingotype ='kubulek_v5'
+if (localStorage.bingotype == 'kubulek_v5') {
     document.body.classList.add('body_kubulek')    
     buttoncolor = 'body_kubulek'
     buttoncross = 'cross_kubulek'
@@ -32,7 +31,8 @@ if (localStorage.bingotype == 'kubulek_v4') {
     pola = bingos[localStorage.bingotype]
     render_bingo()
 }
-if (localStorage.bingotype == 'kubulek_v5') {
+if (localStorage.bingotype == 'kubulek_v4') {
+    localStorage.bingotype ='kubulek_v5'
     document.body.classList.add('body_kubulek')    
     buttoncolor = 'body_kubulek'
     buttoncross = 'cross_kubulek'
