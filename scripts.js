@@ -2,17 +2,26 @@ pola = {}
 pola = bingos['kubulek_v5']
 
 if (localStorage.bingotype === undefined) {
-    localStorage.bingotype = 'kubulek_v5'
-    document.body.classList.add('body_kubulek')    
-    pola = bingos['kubulek_v5']
-    buttoncolor = 'body_kubulek'
-    buttoncross = 'cross_kubulek'
-    picturesrc = 'img/kubulek.jpg'
-    document.getElementById('subheader').innerHTML = 'edycja kubańska, wersja 5'
+    localStorage.bingotype = 'santa'
+    document.body.classList.add('body_santa')    
+    pola = bingos['santa']
+    buttoncolor = 'body_santa'
+    buttoncross = 'cross_santa'
+    picturesrc = 'img/santa.png'
+    document.getElementById('subheader').innerHTML = 'edycja świąteczna, wersja 1'
     render_bingo()
     //location.reload()
 }
 
+if (localStorage.bingotype == 'santa') {
+    document.body.classList.add('body_santa')    
+    buttoncolor = 'body_santa'
+    buttoncross = 'cross_santa'
+    document.getElementById('subheader').innerHTML = 'edycja świąteczna, wersja 1'
+    picturesrc = 'img/santa.png'
+    pola = bingos[localStorage.bingotype]
+    render_bingo()
+}
 if (localStorage.bingotype == 'zozun') {
     document.body.classList.add('body_zozun')    
     buttoncolor = 'body_zozun'
@@ -130,5 +139,9 @@ document.getElementById('switch_kubulek').onclick = function(){
 //window.onload = document.getElementById('myAudio').play()
 document.getElementById('switch_zozun').onclick = () => {
     localStorage.bingotype = 'zozun'
+    reset()   
+}
+document.getElementById('switch_santa').onclick = () => {
+    localStorage.bingotype = 'santa'
     reset()   
 }

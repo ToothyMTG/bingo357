@@ -2,6 +2,11 @@
     --yellow:#d8fd35;
     --green:#8dc87b;
     --orange: #f95f1f;
+    --red:#ff1822;
+    --grey:#afb7bb;
+    --white:#fff;
+    --new: #DF3939;
+;
 }
 
 
@@ -12,6 +17,17 @@ body {
 }
 .body_kubulek {background-color: var(--orange);}
 .body_zozun {background-color: var(--yellow);}
+.body_santa {background-color: var(--white);color: var(--red);}
+.body_santa #mainbody button {color: black;border-color: var(--red);}
+.body_santa #mainbody button:hover{background-color: var(--grey);}
+.body_santa img {
+    background-color: var(--red);
+    object-fit:cover;
+    /*max-width: 20%;
+    height: auto;
+    padding-top: 2.8%*/
+}
+
 
 @media (orientation: portrait) {
     #mainframe {
@@ -85,6 +101,7 @@ img {
 }
 #mainbody .cross_zozun {background-color: var(--yellow);}
 #mainbody .cross_kubulek {background-color: var(--yellow);}
+#mainbody .cross_santa {background-color: var(--white);}
 
 @keyframes letsflash {
     0% {background-color: var(--yellow);}
@@ -117,7 +134,7 @@ img {
 .switcher {
     background-color: var(--yellow);
     position: relative;
-    left: 27.5%;
+    left: 20.0%;
     width: 15%;
     height: 3%;
     float:left;
