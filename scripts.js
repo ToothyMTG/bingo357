@@ -3,21 +3,13 @@ pola = bingos['kubulek_v5']
 
 if (localStorage.bingotype === undefined) {
     localStorage.bingotype = 'santa'
-    document.body.classList.add('body_santa')    
-    pola = bingos['santa']
-    buttoncolor = 'body_santa'
-    buttoncross = 'cross_santa'
-    picturesrc = 'img/santa.png'
-    document.getElementById('subheader').innerHTML = 'edycja świąteczna, wersja 1'
-    render_bingo()
-    //location.reload()
 }
 
 if (localStorage.bingotype == 'santa') {
     document.body.classList.add('body_santa')    
     buttoncolor = 'body_santa'
     buttoncross = 'cross_santa'
-    document.getElementById('subheader').innerHTML = 'edycja świąteczna, wersja 1'
+    document.getElementById('subheader').innerHTML = 'edycja licytacyjna, wersja na rok 2022'
     picturesrc = 'img/santa.png'
     pola = bingos[localStorage.bingotype]
     render_bingo()

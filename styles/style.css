@@ -2,9 +2,9 @@
     --yellow:#d8fd35;
     --green:#8dc87b;
     --orange: #f95f1f;
-    --red:#ff1822;
+    --red:#8c1218;
     --grey:#afb7bb;
-    --white:#fff;
+    --white:#f0f0f0;
     --new: #DF3939;
 ;
 }
@@ -16,9 +16,11 @@ body {
     overflow: hidden;
 }
 .body_kubulek {background-color: var(--orange);}
+
 .body_zozun {background-color: var(--yellow);}
+
 .body_santa {background-color: var(--white);color: var(--red);}
-.body_santa #mainbody button {color: black;border-color: var(--red);}
+.body_santa #mainbody button {color: var(--red);border-color: var(--red);}
 .body_santa #mainbody button:hover{background-color: var(--grey);}
 .body_santa img {
     background-color: var(--red);
