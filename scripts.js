@@ -2,17 +2,18 @@ pola = {}
 pola = bingos['kubulek_v5']
 
 if (localStorage.bingotype === undefined) {
-    localStorage.bingotype = 'kubulek_v5'
-    document.body.classList.add('body_kubulek')    
-    pola = bingos['kubulek_v5']
-    buttoncolor = 'body_kubulek'
-    buttoncross = 'cross_kubulek'
-    picturesrc = 'img/kubulek.jpg'
-    document.getElementById('subheader').innerHTML = 'edycja kubańska, wersja 5'
-    render_bingo()
-    //location.reload()
+    localStorage.bingotype = 'santa'
 }
 
+if (localStorage.bingotype == 'santa') {
+    document.body.classList.add('body_santa')    
+    buttoncolor = 'body_santa'
+    buttoncross = 'cross_santa'
+    document.getElementById('subheader').innerHTML = 'edycja licytacyjna, wersja na rok 2022'
+    picturesrc = 'img/santa.png'
+    pola = bingos[localStorage.bingotype]
+    render_bingo()
+}
 if (localStorage.bingotype == 'zozun') {
     document.body.classList.add('body_zozun')    
     buttoncolor = 'body_zozun'
@@ -130,5 +131,9 @@ document.getElementById('switch_kubulek').onclick = function(){
 //window.onload = document.getElementById('myAudio').play()
 document.getElementById('switch_zozun').onclick = () => {
     localStorage.bingotype = 'zozun'
+    reset()   
+}
+document.getElementById('switch_santa').onclick = () => {
+    localStorage.bingotype = 'santa'
     reset()   
 }
