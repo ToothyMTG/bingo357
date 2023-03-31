@@ -121,7 +121,7 @@ bingos = {
         'He He He',
         'Słaba jakość u rozmówcy',
         'img',
-        'Pierogi i inne pysznośći',
+        'Reportaż budzący silne emocje',
         'Szkalowanie RPP',
         'Słuchacz jest patronem',
         'Kontrower-syjne stanowisko',
