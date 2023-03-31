@@ -109,11 +109,11 @@ bingos = {
         ],
     'zozun': [
         'Marcel szkalowany',
-        'Zmiana oświetlenia w studiu',
+        'Złote myśli Ernesta',
         'Segment z puszki',
         'Słuchacz szkalowany',
         'Wyciszenie słuchacza',
-        'Przekręcone nazwisko słuchacza',
+        'Przekręcone imię słuchacza',
         'Wywołanie gównoburzy',
         'Wspomnienie Trójki',
         'Przekręcone nazwisko gościa',
