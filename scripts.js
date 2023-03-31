@@ -2,7 +2,7 @@ pola = {}
 pola = bingos['kubulek_v5']
 
 if (localStorage.bingotype === undefined) {
-    localStorage.bingotype = 'santa'
+    localStorage.bingotype = 'kubulek_v5'
 }
 
 if (localStorage.bingotype == 'santa') {
@@ -18,7 +18,7 @@ if (localStorage.bingotype == 'zozun') {
     document.body.classList.add('body_zozun')    
     buttoncolor = 'body_zozun'
     buttoncross = 'cross_zozun'
-    document.getElementById('subheader').innerHTML = 'edycja zozuńska, wersja 1'
+    document.getElementById('subheader').innerHTML = 'edycja zozuńska, wersja 2'
     picturesrc = 'img/zozun.jpg'
     pola = bingos[localStorage.bingotype]
     render_bingo()
