@@ -137,3 +137,49 @@ document.getElementById('switch_santa').onclick = () => {
     localStorage.bingotype = 'santa'
     reset()   
 }
+
+var testlist = bingos.kubulek_v5
+function randomizelist() {
+    console.clear()
+    var today = new Date().toJSON().substring(0, 10);
+    var date = new Date(today)
+    testlist = bingos.kubulek_v5
+    Math.seedrandom(date)
+    selected = []
+    for (let i = 0; i < 25; i++) {
+        var value = Math.floor(Math.random() * testlist.length)
+        selected.push(testlist[value])
+        testlist.splice(value,1)
+        console.log(value)
+    }
+    console.log(selected)
+    
+    // console.log(today,date)
+}
+randomizelist()
+function randomItems(array, len, defaultDate) {
+    today = new Date().toJSON().substr(0, 10);
+    date = defaultDate || new Date(today);
+  
+    choosen = {};
+    result = [];
+    length = list.length;
+    i = 0;
+    j = 0;
+    
+    while (i < len) {
+      date.setMonth(date.getDate() + j);
+      number = (+date/100000) + date.getDay();
+      modulo = number%length;
+      index = Math.floor(modulo);
+      item = array[index];
+      
+      if (!choosen[item]) { 
+        result.push(item);
+        choosen[item] = true;
+        i++;
+      }
+      j++;
+    }
+    return result;
+  }
