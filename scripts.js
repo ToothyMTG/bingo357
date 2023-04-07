@@ -1,10 +1,20 @@
 pola = {}
-pola = bingos['kubulek_v5']
+// pola = bingos['kubulekrandom']
 
 if (localStorage.bingotype === undefined) {
-    localStorage.bingotype = 'kubulek_v5'
+    localStorage.bingotype = 'kubulekrandom'
 }
 
+if (localStorage.bingotype == 'kubulekrandom') {
+    document.body.classList.add('body_kubulek')    
+    buttoncolor = 'body_kubulek'
+    buttoncross = 'cross_kubulek'
+    document.getElementById('subheader').innerHTML = 'edycja losowana codziennie'
+    picturesrc = 'img/kubulek.jpg'
+    randomizelist(bingos.kubulekrandom)
+    pola = todaybingo
+    render_bingo()
+}
 if (localStorage.bingotype == 'santa') {
     document.body.classList.add('body_santa')    
     buttoncolor = 'body_santa'
@@ -125,7 +135,7 @@ function reset() {
 }
 
 document.getElementById('switch_kubulek').onclick = function(){
-    localStorage.bingotype = 'kubulek_v5'
+    localStorage.bingotype = 'kubulekrandom'
     reset()   
 }
 //window.onload = document.getElementById('myAudio').play()
@@ -136,4 +146,25 @@ document.getElementById('switch_zozun').onclick = () => {
 document.getElementById('switch_santa').onclick = () => {
     localStorage.bingotype = 'santa'
     reset()   
+}
+
+function randomizelist(a) {
+    console.clear()
+    var today = new Date().toJSON().substring(0, 10);
+    var date = new Date(today)
+    // var date = new Date('2023-04-07') // Debug value
+    Math.seedrandom(date)
+    var givenlist = a
+    todaybingo = []
+    for (let i = 0; i < 25; i++) {
+        if (i == 12) {
+            todaybingo.push('img')
+            continue
+        }
+        var value = Math.floor(Math.random() * givenlist.length)
+        todaybingo.push(givenlist[value])
+        givenlist.splice(value,1)
+    }
+    
+    // console.log(today,date)
 }
