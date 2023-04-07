@@ -150,10 +150,12 @@ document.getElementById('switch_santa').onclick = () => {
 
 function randomizelist(a) {
     console.clear()
-    var today = new Date().toISOString().substring(0, 10);
-    var date = new Date(today)
+    // var today = new Date().toISOString().substring(0, 10);
+    var today = new Date()
+    var dateform = today.getFullYear() + '-' + today.getUTCMonth() + '-' + today.getUTCDate()
+    var date = new Date(dateform)
     // var date = new Date('2023-04-07') // Debug value
-    Math.seedrandom(date)
+    Math.seedrandom(dateform)
     var givenlist = a
     todaybingo = []
     for (let i = 0; i < 25; i++) {
@@ -166,5 +168,4 @@ function randomizelist(a) {
         givenlist.splice(value,1)
     }
     
-    console.log(today)
 }
