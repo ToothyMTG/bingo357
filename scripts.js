@@ -150,7 +150,7 @@ document.getElementById('switch_santa').onclick = () => {
 
 function randomizelist(a) {
     console.clear()
-    var today = new Date().toJSON().substring(0, 10);
+    var today = new Date().toISOString().substring(0, 10);
     var date = new Date(today)
     // var date = new Date('2023-04-07') // Debug value
     Math.seedrandom(date)
@@ -166,5 +166,5 @@ function randomizelist(a) {
         givenlist.splice(value,1)
     }
     
-    // console.log(today,date)
+    console.log(today)
 }
