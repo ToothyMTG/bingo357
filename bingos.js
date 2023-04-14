@@ -153,7 +153,7 @@ bingos = {
         'Kuba mówi o żonie lub o Lucku',
         'Kuba podaje złą godzinę',
         'Kuba potakuje rozmówcy',
-        'Kuba szkaluje Marcela',
+        'Marek wspomina swoją córkę',
         'Kuba wychodzi na papierosa',
         'Kuczyński szkaluje RPP',
         'Nawiązanie do żeglarstwa',
