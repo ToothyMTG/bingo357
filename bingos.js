@@ -182,6 +182,6 @@ bingos = {
         'Utwór Sanah',
         'Rozmówca jest wczorajszy',
         'Wspomnienie Trójki',
-        'FRAZA: "Ąąąąą',
+        'FRAZA: "Ąąąąą"',
     ]
 }
