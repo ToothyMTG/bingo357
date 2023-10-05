@@ -21,6 +21,10 @@ body {
 }
 .body_kubulek {background-color: var(--orange);}
 
+.body_misiek {background-color: yellow;}
+.body_misiek #mainbody button {background: linear-gradient(green,yellow,red);}
+.body_misiek #mainbody button:hover {background: linear-gradient(green,yellow,green);}
+
 .body_zozun {background-color: var(--yellow);}
 
 .body_santa {background-color: var(--white);color: var(--red);}
@@ -110,6 +114,10 @@ img {
 #mainbody .cross_zozun {background-color: var(--yellow);}
 #mainbody .cross_kubulek {background-color: var(--yellow);}
 #mainbody .cross_santa {background-color: var(--white);}
+#mainbody .cross_misiek {
+    opacity: 0.4;
+    background-image: linear-gradient(red,yellow,red);
+}
 
 @keyframes letsflash {
     0% {background-color: var(--yellow);}
@@ -142,7 +150,7 @@ img {
 .switcher {
     background-color: var(--yellow);
     position: relative;
-    left: 20.0%;
+    left: 12%;
     width: 15%;
     height: 3%;
     float:left;

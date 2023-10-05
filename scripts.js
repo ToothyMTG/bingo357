@@ -15,6 +15,16 @@ if (localStorage.bingotype == 'kubulekrandom') {
     pola = todaybingo
     render_bingo()
 }
+if (localStorage.bingotype == 'misiek') {
+    document.body.classList.add('body_misiek')    
+    buttoncolor = 'body_misiek'
+    buttoncross = 'cross_misiek'
+    document.getElementById('subheader').innerHTML = 'edycja miśkowa, wyczilowana'
+    picturesrc = 'img/misiek.png'
+    randomizelist(bingos.misiek)
+    pola = todaybingo
+    render_bingo()
+}
 if (localStorage.bingotype == 'santa') {
     document.body.classList.add('body_santa')    
     buttoncolor = 'body_santa'
@@ -141,6 +151,10 @@ document.getElementById('switch_kubulek').onclick = function(){
 //window.onload = document.getElementById('myAudio').play()
 document.getElementById('switch_zozun').onclick = () => {
     localStorage.bingotype = 'zozun'
+    reset()   
+}
+document.getElementById('switch_misiek').onclick = () => {
+    localStorage.bingotype = 'misiek'
     reset()   
 }
 document.getElementById('switch_santa').onclick = () => {
