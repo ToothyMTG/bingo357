@@ -29,10 +29,14 @@ if (localStorage.bingotype == 'santa') {
     document.body.classList.add('body_santa')    
     buttoncolor = 'body_santa'
     buttoncross = 'cross_santa'
-    document.getElementById('subheader').innerHTML = 'edycja licytacyjna, wersja na rok 2022'
+    document.getElementById('subheader').innerHTML = 'SMS o treści POMOC na numer 7545'
     picturesrc = 'img/santa.png'
-    pola = bingos[localStorage.bingotype]
+    randomizelist(bingos.santa)
+    pola = todaybingo
     render_bingo()
+    document.getElementById('kubulek').onclick = () => {
+        window.open('https://radio357.pl/lp/aukcje/','_blank')
+    }
 }
 if (localStorage.bingotype == 'zozun') {
     document.body.classList.add('body_zozun')    

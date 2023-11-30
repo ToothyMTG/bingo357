@@ -37,7 +37,9 @@ body {
     height: auto;
     padding-top: 2.8%*/
 }
-
+.body_santa img:hover {
+    background-color: var(--new);
+}
 
 @media (orientation: portrait) {
     #mainframe {
