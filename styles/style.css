@@ -65,7 +65,7 @@ body {
     border-style:solid;
     border-color: black;
     border-width: 1px;
-    font-size: 3vw;
+    font-size: 2.5vw;
     font-family: "Neue World",serif;
 }
 
@@ -85,7 +85,7 @@ body {
         position:relative;
     }
     #mainbody button {
-        font-size: 3vh;
+        font-size: 2.5vh;
     }
     #header {height: 5%}
     #subheader {height: 5%;}
