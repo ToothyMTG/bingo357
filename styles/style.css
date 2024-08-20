@@ -6,6 +6,8 @@
     --grey:#afb7bb;
     --white:#f0f0f0;
     --new: #DF3939;
+    --tiptopblue: #21004e;
+    --tiptopred: #f24863;
 ;
 }
 
@@ -24,6 +26,13 @@ body {
 .body_misiek {background-color: yellow;}
 .body_misiek #mainbody button {background: linear-gradient(green,yellow,red);}
 .body_misiek #mainbody button:hover {background: linear-gradient(green,yellow,green);}
+
+.body_tiptop {background-color: var(--tiptopblue);color: var(--tiptopred)}
+.body_tiptop #mainbody button {color: white;border-color: var(--tiptopred);}
+.body_tiptop #mainbody button:hover {background-color: var(--tiptopred);border-color: white;}
+.body_tiptop img {object-fit: cover;}
+.body_tiptop .switcher {background-color: var(--tiptopblue);color: var(--tiptopred);border-color: white;}
+.body_tiptop .switcher:hover {background-color: white;}
 
 .body_zozun {background-color: var(--yellow);}
 
