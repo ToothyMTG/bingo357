@@ -25,6 +25,17 @@ if (localStorage.bingotype == 'misiek') {
     pola = todaybingo
     render_bingo()
 }
+if (localStorage.bingotype == 'tiptop') {
+    document.body.classList.add('body_tiptop')    
+    buttoncolor = 'body_tiptop'
+    buttoncross = 'cross_tiptop'
+    document.getElementById('subheader').innerHTML = 'edycja porycka'
+    document.getElementById('header').innerHTML = 'TipTopowe bingo'
+    picturesrc = 'img/tiptop.jpg'
+    randomizelist(bingos.tiptop)
+    pola = todaybingo
+    render_bingo()
+}
 if (localStorage.bingotype == 'santa') {
     document.body.classList.add('body_santa')    
     buttoncolor = 'body_santa'
@@ -153,8 +164,8 @@ document.getElementById('switch_kubulek').onclick = function(){
     reset()   
 }
 //window.onload = document.getElementById('myAudio').play()
-document.getElementById('switch_zozun').onclick = () => {
-    localStorage.bingotype = 'zozun'
+document.getElementById('switch_tiptop').onclick = () => {
+    localStorage.bingotype = 'tiptop'
     reset()   
 }
 document.getElementById('switch_misiek').onclick = () => {
