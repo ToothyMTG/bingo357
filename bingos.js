@@ -245,6 +245,9 @@ bingos = {
         'Fraza "liczna państwa obecność"',
         'Określenie "pieśń"',
         'Matylda na podium',
-        'Nawiązanie do jedzenia'
+        'Nawiązanie do jedzenia',
+        'Słuchacz domaga się konkretnego utworu ',
+        'Utwór francusko-języczny',
+        'Komunikat "piosenka dla dorosłych"',
     ]
 }
