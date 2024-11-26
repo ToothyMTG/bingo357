@@ -113,6 +113,9 @@ bingos = {
         'Słuchacz wyłudza kubek',
         'Oferta zaraz przed serwisem',
         'Problemy z połączeniem',
+        'Dziecko przy telefonie',
+        'Słuchacze rozwiązują problem przed końcem audycji',
+        'Nietypowa prośba słuchacza',
         ],
     'zozun': [
         'Marcel szkalowany',
