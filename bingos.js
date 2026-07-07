@@ -253,7 +253,6 @@ bingos = {
         'Segment szkalowania',
         'Blik cyk',
         'Segment łapie opóźnienie',
-        '#jedzenie',
         'Francuski numer',
         'Oksfordzki akcent',
     ],
