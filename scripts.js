@@ -36,6 +36,17 @@ if (localStorage.bingotype == 'tiptop') {
     pola = todaybingo
     render_bingo()
 }
+if (localStorage.bingotype == 'tubis') {
+    document.body.classList.add('body_tubis')    
+    buttoncolor = 'body_tubis'
+    buttoncross = 'cross_kubulek'
+    document.getElementById('subheader').innerHTML = 'tinky winky i te sprawy'
+    document.getElementById('header').innerHTML = 'Tubisiowe bingo'
+    picturesrc = 'img/tubis.avif'
+    randomizelist(bingos.tubis)
+    pola = todaybingo
+    render_bingo()
+}
 if (localStorage.bingotype == 'santa') {
     document.body.classList.add('body_santa')    
     buttoncolor = 'body_santa'
@@ -174,6 +185,10 @@ document.getElementById('switch_misiek').onclick = () => {
 }
 document.getElementById('switch_santa').onclick = () => {
     localStorage.bingotype = 'santa'
+    reset()   
+}
+document.getElementById('switch_tubis').onclick = () => {
+    localStorage.bingotype = 'tubis'
     reset()   
 }
 

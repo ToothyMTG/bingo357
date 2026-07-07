@@ -27,6 +27,9 @@ body {
 .body_misiek #mainbody button {background: linear-gradient(green,yellow,red);}
 .body_misiek #mainbody button:hover {background: linear-gradient(green,yellow,green);}
 
+.body_tubis {background-color: var(--orange)}
+.body_tubis #mainbody button {background-color: var(--white);}
+
 .body_tiptop {background-color: var(--tiptopblue);color: var(--tiptopred)}
 .body_tiptop #mainbody button {color: white;border-color: var(--tiptopred);}
 .body_tiptop #mainbody button:hover {background-color: var(--tiptopred);border-color: white;}
@@ -161,8 +164,8 @@ img {
 .switcher {
     background-color: var(--yellow);
     position: relative;
-    left: 12%;
-    width: 15%;
+    left: 8%;
+    width: 14%;
     height: 3%;
     float:left;
 }
