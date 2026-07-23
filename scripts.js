@@ -40,7 +40,7 @@ if (localStorage.bingotype == 'tubis') {
     document.body.classList.add('body_tubis')    
     buttoncolor = 'body_tubis'
     buttoncross = 'cross_kubulek'
-    document.getElementById('subheader').innerHTML = 'tinky winky i te sprawy'
+    document.getElementById('subheader').innerHTML = 'Walking in my shoes i te sprawy'
     document.getElementById('header').innerHTML = 'Tubisiowe bingo'
     picturesrc = 'img/tubis.avif'
     randomizelist(bingos.tubis)
