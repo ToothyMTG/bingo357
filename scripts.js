@@ -199,7 +199,7 @@ function randomizelist(a) {
     var dateform = today.getFullYear() + '-' + today.getUTCMonth() + '-' + today.getUTCDate()
     var date = new Date(dateform)
     // var date = new Date('2023-04-07') // Debug value
-    //Math.seedrandom(dateform)
+    Math.seedrandom(dateform)
     var givenlist = a
     todaybingo = []
     for (let i = 0; i < 25; i++) {
